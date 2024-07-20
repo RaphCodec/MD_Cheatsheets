@@ -3,93 +3,172 @@ The cheatsheet is broken down into sections of code, followed by their output.
 
 ## SETUP
 
-``` git
+``` bash
 git config --global user.name “[firstname lastname]”
 ```
 
-``` git
+``` bash
 git config --global user.email “[valid-email]”
 ```
 
-``` git
+``` bash
 git config --global color.ui auto
 ```
 
-```git
+``` bash
 git init
 ```
 
-```git 
+``` bash 
 git clone [url]
 ```
 
 ## Staging
 
-``` git
+``` bash
 git status
 ```
 
-``` git
+``` bash
 git add [file]
 ```
 
-``` git
+``` bash
 git reset [file]
 ```
 
-``` git
+``` bash
 git diff
 ```
 
-``` git
+``` bash
 git diff --staged
 ```
 
-``` git
+``` bash
 git commit -m 'Commit message'
 ```
 
 ## Branches
 
-```git
+``` bash
 git branch
 ```
 
-``` git
+``` bash
 git branch [branch_name]
 ```
 
-```git
+``` bash
 git checkout
 ```
 
-```git
+``` bash
 git merge [branch_name]
 ```
 
-``` git
+``` bash
 git log
 ```
 
 ## Insepction
 
-``` git
+``` bash
 git log
 ```
 
-```git 
+``` bash 
 git log branch_2..branch_1
 ```
 
-```git
+``` bash
 git log --follow [file]
 ```
 
-```git
+``` bash
 git diff branch_2...branch_1
 ```
 
-```git
+``` bash
 git show [SHA]
 ```
 
+## Sharing/Updating
+
+``` bash
+git remote add [alias] [url]
+```
+
+``` bash
+git fetch [alias]
+```
+
+``` bash
+git merge [alias]/[branch]
+```
+
+``` bash
+git push [alias] [branch]
+```
+
+``` bash
+git pull
+```
+
+```
+git pull [remote_name] [branch_name]
+```
+
+## Path Changes
+
+``` bash
+git rm [file]
+```
+
+``` bash
+git mv [existing-path] [new-path]
+```
+
+``` bash
+git log --stat -M
+```
+
+## Rewrite History
+
+``` bash
+git rebase [branch]
+```
+
+``` bash
+git reset --hard [commit]
+```
+
+## Temporary Commits
+
+``` bash
+git stash
+```
+
+``` bash
+git stash list
+```
+
+``` bash
+git stash pop
+```
+
+``` bash
+git stash drop
+```
+
+## Git Ignore Patterns
+
+``` bash
+logs/
+*.notes
+pattern*/
+```
+
+``` bash
+git config --global core.excludesfile [file]
+```
